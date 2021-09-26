@@ -20,11 +20,11 @@ function addTaskToList() {
 }
 
 function compliteTask(event) {
-  const target = event.target;
+  const {target} = event;
   if (target.checked) {
-    target.parentElement.className = "success";
+    target.parentElement.classlist.add('success');
   } else {
-    target.parentElement.className = null;
+    target.parentElement.classList.remove('success');
   }
 }
 
